@@ -1,0 +1,6 @@
+git reset <commit\branch (opcional)> --hard = remove todos os arquivos nao comitados
+
+apos criar o git ignore, caso o arquivo posto la esteja comitado, usar:
+git rm --cached caminho/do/arquivo.extensao
+e dar um commit
+
