@@ -1,6 +1,37 @@
-git reset <commit\branch (opcional)> --hard = remove todos os arquivos nao comitados
+# Configurando repositorio remoto:
+git remote add origin https://github.com/usuario/nome-do-repositorio.git
 
-apos criar o git ignore, caso o arquivo posto la esteja comitado, usar:
+# Ainda em repositorio remoto execute apenas uma vez:
+# e depois disso é so: git push
+git push -u origin main
+
+# remove todos os arquivos nao comitados
+git reset <commit\branch (opcional)> --hard 
+
+# Apos criar o git ignore, caso o arquivo posto la esteja comitado, usar:
 git rm --cached caminho/do/arquivo.extensao
-e dar um commit
+# e dar um commit
+
+
+# Criação de branch
+git branch nome-da-nova-branch
+
+# Criar e acessa ao mesmo tempo:
+git checkout -b nome-da-nova-branch
+
+# Remover branch (-d apaga se foi mesclado e -D apaga de qualquer forma)
+git branch -d nome-da-branch
+
+# Ver todas as branchs remotas
+git branch -r
+
+# Fazer uma nova branch local com base na remota
+git checkout -b branch-local origin/branch-remota
+
+# Fazer push de uma nova branch:
+git push -u origin nome-da-nova-branch
+# Após isso é so git push
+
+# Remover branch do remoto
+git push origin --delete nome-da-branch
 
